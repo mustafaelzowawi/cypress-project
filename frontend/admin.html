@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cypress - Admin Dashboard</title>
+    <!-- Leaflet CSS for mapping -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Chart.js for visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+    <div class="header">
+        <h1>Cypress Admin Dashboard</h1>
+        <div class="nav-links">
+            <a href="index.html">Map View</a>
+        </div>
+    </div>
+
+    <!-- Summary Statistics -->
+    <div class="card">
+        <h2>Summary Statistics</h2>
+        <div class="summary-stats" id="statistics">
+            <div class="stat-card">
+                <div class="stat-value" id="totalReports">-</div>
+                <div class="stat-label">Total Reports</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="reportsToday">-</div>
+                <div class="stat-label">Last 24 Hours</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="reportsWeek">-</div>
+                <div class="stat-label">Last 7 Days</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="reportsMonth">-</div>
+                <div class="stat-label">Last 30 Days</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        <!-- Charts Section -->
+        <div class="card">
+            <h2>Reports by Category</h2>
+            <div class="chart-container">
+                <canvas id="categoryChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Map Overview -->
+        <div class="card">
+            <h2>Reports Map</h2>
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <!-- Reports List Section -->
+    <div class="card">
+        <h2>Reports List</h2>
+        <div class="filters">
+            <select id="categoryFilter">
+                <option value="">All Categories</option>
+                <option value="pothole">Pothole</option>
+                <option value="graffiti">Graffiti</option>
+                <option value="streetlight">Streetlight Issue</option>
+                <option value="other">Other</option>
+            </select>
+            <select id="timeframeFilter">
+                <option value="">All Time</option>
+                <option value="day">Last 24 Hours</option>
+                <option value="week">Last 7 Days</option>
+                <option value="month">Last 30 Days</option>
+                <option value="year">Last Year</option>
+            </select>
+            <select id="sortByFilter">
+                <option value="date">Sort by Date</option>
+                <option value="category">Sort by Category</option>
+                <option value="address">Sort by Location</option>
+            </select>
+            <select id="orderFilter">
+                <option value="desc">Descending</option>
+                <option value="asc">Ascending</option>
+            </select>
+            <button id="applyFilters">Apply Filters</button>
+        </div>
+        <div id="reportsList">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Location</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="reportsTableBody">
+                    <!-- Reports will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/admin.js"></script>
+</body>
+</html> 

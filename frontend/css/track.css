@@ -1,0 +1,114 @@
+/* Track page specific styles */
+
+#report-container {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#report-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+#report-container li {
+    background: #f8f9fa;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #2E7D32;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#report-container li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.report-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.report-category {
+    display: inline-block;
+    background-color: #e8f5e9;
+    color: #2E7D32;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.report-date {
+    color: #757575;
+    font-size: 0.9em;
+}
+
+.report-description {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.subscription-form {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #eaeaea;
+}
+
+.subscription-form input {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    width: 250px;
+    max-width: 100%;
+    margin-right: 10px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.subscription-form input:focus {
+    outline: none;
+    border-color: #2E7D32;
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+.subscription-form button {
+    padding: 12px 16px;
+}
+
+.subscription-success {
+    color: #2E7D32;
+    margin-top: 8px;
+    display: none;
+    font-weight: 600;
+}
+
+.subscription-error {
+    color: #c62828;
+    margin-top: 8px;
+    display: none;
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .subscription-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .subscription-form input {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+} 

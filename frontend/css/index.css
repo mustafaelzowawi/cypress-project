@@ -1,0 +1,45 @@
+/* Index page specific styles */
+
+/* Map container */
+#map {
+    height: 450px;
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+    border: 1px solid #eaeaea;
+}
+
+/* Coordinates display */
+#coordinates {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    border-left: 4px solid #2E7D32;
+}
+
+#coordinates p {
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#coordinates span {
+    font-weight: 600;
+    color: #2E7D32;
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+/* Button styling specific to index page */
+button {
+    margin-top: 15px;
+    display: block;
+    width: 200px;
+} 

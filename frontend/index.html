@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://unpkg.com; style-src 'self' https://unpkg.com; img-src 'self' data: https://*.tile.openstreetmap.org https://unpkg.com;">
+    <title>Cypress</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+    <div class="header">
+        <h2>Cypress - Report Community Issues</h2>
+        <div class="nav-links">
+            <a href="index.html">Map</a>
+            <a href="track.html">Track Reports</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="admin.html">Admin Dashboard</a>
+        </div>
+    </div>
+
+    <p>Click on the map to select a location where you'd like to report an issue.</p>
+    
+    <div id="map"></div>
+
+    <!-- Display selected coordinates -->
+    <div id="coordinates">
+        <p>Latitude: <span id="latDisplay">N/A</span></p>
+        <p>Longitude: <span id="lngDisplay">N/A</span></p>
+    </div>
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Custom JS for map integration -->
+    <script src="js/map.js"></script>
+
+</body>
+</html>

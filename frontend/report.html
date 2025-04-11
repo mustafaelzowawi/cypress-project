@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cypress - Report an Issue</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/report.css" />
+</head>
+<body>
+  <div class="header">
+    <h2>Report an Issue</h2>
+    <div class="nav-links">
+      <a href="index.html">Map</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="admin.html">Admin Dashboard</a>
+    </div>
+  </div>
+
+  <form id="reportForm">
+    <label for="description">Description:</label><br>
+    <textarea id="description" name="description" required></textarea><br><br>
+    
+    <label for="category">Category:</label><br>
+    <select id="category" name="category">
+      <option value="pothole">Pothole</option>
+      <option value="graffiti">Graffiti</option>
+      <option value="streetlight">Streetlight Issue</option>
+      <option value="other">Other</option>
+    </select><br><br>
+    
+    <!-- Hidden fields for location  -->
+    <input type="hidden" id="latitude" name="latitude">
+    <input type="hidden" id="longitude" name="longitude">
+    
+    <button type="submit">Submit Report</button>
+  </form>
+  
+  <!-- Include the JavaScript for handling form submission -->
+  <script src="js/form.js"></script>
+</body>
+</html>
