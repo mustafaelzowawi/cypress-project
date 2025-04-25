@@ -1,5 +1,0 @@
-app/dialect/SQLiteIdentityColumnSupport.class
-app/CypressApplication.class
-app/model/Report.class
-app/repository/ReportRepository.class
-app/dialect/SQLiteDialect.class
