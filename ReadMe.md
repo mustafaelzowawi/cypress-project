@@ -29,6 +29,8 @@ This document provides an overview of the Cypress project components and instruc
     -   `FeedbackController`: Handles user feedback submissions.
     -   `AdminController`: Provides administrative functionalities (e.g., managing reports, viewing stats).
     -   `SubscriptionController`: Manages user subscriptions (for report updates).
+    -   `HomeController`: Serves the main index page at the root path (`/`).
+-   **Static File Serving:** The backend is configured to serve frontend static files from the `../frontend/` directory relative to the JAR location. The `HomeController` ensures that accessing the root URL (`/`) properly serves the `index.html` page.
 -   **Build:** Navigate to the `backend/` directory and run:
     ```bash
     mvn clean package
