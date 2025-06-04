@@ -18,6 +18,28 @@ This document provides an overview of the Cypress project components and instruc
     -   `main.go`: The source code for the microservice.
     -   `go.mod`, `go.sum`: Go module files.
 
+## ✨ Features
+
+### 📍 Interactive Map-Based Report Creation
+Click anywhere on the map to select a location and create detailed community issue reports with categorization.
+
+![Map Report Creation](./Map_Report_Creation.gif)
+
+### 🔍 Report Tracking & Management  
+Track your submitted reports by entering your email address. Browse through all community reports with scrollable interface.
+
+![Report Tracking](./Report_Tracking.gif)
+
+### 🤖 Duplicate Detection
+Advanced microservice automatically detects potential duplicate reports using geographical proximity and text similarity algorithms.
+
+![Duplicate Detection](./Duplicate_Detection.gif)
+
+### 📊 Comprehensive Admin Dashboard
+Real-time analytics, interactive charts, and powerful administrative tools for managing community reports.
+
+![Admin Dashboard Overview](./Admin_Dashboard_Overview.gif)
+
 ## Components
 
 ### 1. Backend (Spring Boot)
